@@ -1,0 +1,77 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "gdb-MSY64",   
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "visualizerFile": "C:\\Users\\PH\\AppData\\Local\\Microsoft\\VisualStudio\\16.0_fd8ed6f2\\Extensions\\nigukaka.tcf\\qt5.natvis.xml",
+            "showDisplayString": true,
+            // "cwd": "${workspaceFolder}/${command:cmake.buileType}",
+           "cwd": "${workspaceFolder}/build-debug",
+            "MIMode": "gdb",
+            "externalConsole": false,
+            "miDebuggerPath": "D:\\Program Files\\msys64\\mingw64\\bin\\gdb.exe",
+            //  "miDebuggerArgs":"C:\\Qt\\5.15.2\\Src",
+            "setupCommands": [
+                {   
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "C:/Qt/5.15.2/mingw81_32/bin;D:/Program Files/msys64/mingw64/bin;${env:PATH}"
+                }
+]
+        },{
+            "name": "Mingw810_32-gdb",   
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "visualizerFile": "c:/qt/qt5.natvis",
+            "showDisplayString": true,
+           "cwd": "${workspaceFolder}/build-debug",
+            "MIMode": "gdb",
+            "externalConsole": false,
+            "miDebuggerPath": "C:/Qt/Tools/mingw810_32/bin/gdb.exe",
+            //  "miDebuggerArgs": "C:\\Qt\\5.15.2\\Src",
+            "setupCommands": [
+                {   
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "C:/Qt/5.15.2/mingw81_32/bin;D:/Program Files/msys64/mingw64/binD:/Program Files/msys64/mingw64/bin;${env:PATH}"
+                }
+]
+        }
+        ,{
+            "name": "MSVC调试",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build-debug",
+            "environment": [],
+            "externalConsole": false,
+            "visualizerFile": "c:/qt.natvis.xml"
+        }
+
+    ]
+}
